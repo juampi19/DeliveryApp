@@ -1,0 +1,36 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+.tiendas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__heading,
+    &__parrafo {
+        text-align: center;
+    }
+
+    &__heading {
+        color: v.$secundario;
+        margin: 1rem 0;
+    }
+
+    &__parrafo {
+        margin-bottom: 2rem;
+    }
+
+
+    &__grid {
+        @include m.grid( 2, 2rem );
+    }
+
+    &__enlace {
+        transition-property: transform;
+        transition-duration: .3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
